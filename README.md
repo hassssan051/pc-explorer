@@ -1,32 +1,22 @@
-# PC-Explorer (Prototype)
+# PC-Explorer (Expanded Prototype)
 
-A minimal prototype of the "Progressive Complexity Data Explorer" — a front-end demo that shows how a slider can expose three levels of complexity:
+Expanded PC-Explorer with provenance, scripting DSL, nudges, tooltips, and instrumentation.
 
-- Level 1: Explorer (simple charts)
-- Level 2: Analyst (transforms & stats)
-- Level 3: Data Scientist (scripting — mocked)
+## Features
+- CSV upload & sample data
+- Complexity slider (Levels 1-3)
+- Charting with Plotly
+- Safe filter DSL (Level >=2)
+- Scripting DSL for derived columns (Level 3)
+- Pipeline & provenance with revert
+- Instrumentation export (JSON + CSV)
+- Tooltips and nudges for discoverability
 
 ## Run locally
+1. Node.js >=18 & npm
+2. `npm install`
+3. `npm run dev`
+4. Open http://localhost:5173
 
-1. Ensure you have Node.js (>=18) and npm installed.
-2. Extract the project folder and open a terminal in the project root.
-3. Install dependencies:
-
-```bash
-npm install
-```
-
-4. Start dev server:
-
-```bash
-npm run dev
-```
-
-5. Open the shown local URL (usually http://localhost:5173).
-
-## Notes & Limitations
-
-- This is a prototype meant for demoing the PC concept. The scripting console and sandboxing are intentionally minimal; **do not** run untrusted code.
-- The filter evaluator uses `Function(...)` for brevity — replace with a proper sandbox before production.
-- The UI is intentionally simple; adapt for your evaluation.
-
+## Notes
+This prototype is for demo and pilot testing. The scripting uses a limited evaluator; do not accept untrusted code in production.
